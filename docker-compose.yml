@@ -11,6 +11,9 @@ services:
       RAILS_ENV: development
       DATABASE_URL: postgres://postgres:mysecretpassword@db:5432/postgres
       YARN_INTEGRITY_ENABLED: "false"
+      ALGOLIASEARCH_APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
+      ALGOLIASEARCH_SEARCH_ONLY_KEY: ${ALGOLIASEARCH_SEARCH_ONLY_KEY}
+      ALGOLIASEARCH_API_KEY: ${ALGOLIASEARCH_API_KEY}
     volumes:
       - .:/usr/src/app
     command: bundle exec rails server -b 0.0.0.0 -p 3000
@@ -22,6 +25,9 @@ services:
     environment:
       RAILS_ENV: development
       DATABASE_URL: postgres://postgres:mysecretpassword@db:5432/postgres
+      ALGOLIASEARCH_APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
+      ALGOLIASEARCH_SEARCH_ONLY_KEY: ${ALGOLIASEARCH_SEARCH_ONLY_KEY}
+      ALGOLIASEARCH_API_KEY: ${ALGOLIASEARCH_API_KEY}
   webpacker:
     build: .
     command: ./bin/webpack-dev-server
