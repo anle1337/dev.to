@@ -5,5 +5,9 @@ setup:
 build:
   docker:
     web: Dockerfile
+  config:
+    ALGOLIASEARCH_APPLICATION_ID: 9ND1RJDAS7
+    ALGOLIASEARCH_SEARCH_ONLY_KEY: efe5c6e92d7820eaeebd6f1b06867c8e
+    ALGOLIASEARCH_API_KEY: 34b6768fe00f2a94e139577628d48119
 run:
   web: bundle exec puma -C config/puma.rb
