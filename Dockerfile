@@ -1,5 +1,7 @@
 FROM ruby:2.6.5-alpine3.10
 
+ENV BUNDLE_BUILD__SASSC=--disable-march-tune-native
+
 #------------------------------------------------------------------------------
 #
 # Install Project dependencies
