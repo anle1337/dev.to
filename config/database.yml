@@ -88,4 +88,5 @@ production:
   database: PracticalDeveloper_production
   pool: <%= ENV['DATABASE_POOL_SIZE'] %>
   username: PracticalDeveloper
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV['PRACTICALDEVELOPER_DATABASE_PASSWORD'] %>
